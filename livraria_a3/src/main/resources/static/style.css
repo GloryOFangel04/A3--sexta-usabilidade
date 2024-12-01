@@ -1,0 +1,295 @@
+
+/*estilo geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+    
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+
+      
+        color: rgb(0, 0, 0);
+
+      
+      
+
+
+}
+    
+
+/*PÁGINA PRINCIPAL*/
+
+body{ /*define caracteristicas de estilo da página em geral*/
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+   
+}
+
+#frase1 { /*FRASE DE EFEITO*/
+    text-align: center;
+    font-size: 90px;
+    padding: 50px 4%;
+    margin: 0 auto;
+    color: rgb(0, 0, 0);
+
+}
+
+#parag {
+    text-align: center;
+    font-size:30px;
+    padding: 50px 4%;
+    font-weight: 100;
+    color: rgb(64, 10, 125);
+
+     
+                
+                
+    
+    
+    
+
+}
+
+.interface { /*estilizando somente parte interface*/
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-start;
+    
+    
+}
+
+header{ /*cabeçalho*/
+    padding: 40px 4%;
+    background-image: url('photos/céu.avif');
+    animation: movimento 37s linear infinite;
+    background-size: cover;
+    
+    
+    
+    
+}
+
+#foto img { /*foto gato preto*/
+    height: 300px;
+    display: block;
+}
+
+#listaMenu {
+    list-style-type:none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+#listaMenu li {
+    margin: 0 20px;
+    
+    
+}
+
+#listaMenu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+
+}
+
+#listaMenu a:hover {
+    color:gold;
+    transition: 1s;
+}
+
+
+/*PÁGINA 2 - QUEM SOU*/
+
+
+
+
+
+
+
+
+
+
+
+#corpo2 { /*definindo o body da pagina2*/
+    
+    background-image:url('photos/céu.avif');
+    background-size: cover;
+    background-position: center;
+    
+    background-repeat: no-repeat;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation: movimento 16s linear infinite;
+}
+
+ @keyframes movimento {  /*criando uma animaçao de fundo*/
+    0% {
+        background-position: center top;
+    }
+    
+    
+    50% {
+        background-position: center bottom;
+    }
+
+    100% {
+        background-position: center top;
+    }
+
+}
+
+#tittle2 {
+    font-size: 70px;
+    padding: 40px 4%;
+    margin: 20px 4%;
+    color: white;
+}
+
+#texto2{ 
+    padding: 40px 7%;
+    margin: 0 auto;
+    display:block;
+    justify-content: flex-start;
+    justify-content: space-between;
+    text-align:justify;
+    
+    font-size: 30px;
+}
+
+#parag2{
+    color: rgb(254, 255, 255);
+    font-weight: 500
+    ;
+}
+
+
+/* PÁGINA 3 - FORMACOES */
+
+
+
+
+
+
+#corpo3 {
+    background-image: url('photos/céu.avif');
+     
+    
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center;
+    background-attachment:fixed;
+    margin: o;
+    padding: 0;
+    height: 100%;
+    
+    animation: movimento 30s linear infinite;
+}
+
+
+
+#infosection {
+    margin: 10px;
+    padding: 40px 4%;
+    
+}
+
+.titulo {
+    font-size: 50px;
+    padding: 40px 4%;
+    margin: 0px 0%;
+    color: white;
+
+}
+
+.info {
+    
+        padding: 5px 5%;             
+        margin: 0 auto;               
+        display: flex;                
+        justify-content: space-between; 
+        text-align: justify;          
+        font-size: 30px;     
+        color: white;   
+        font-weight: 500;      
+    
+    
+}
+
+
+/*PÁGINA 4 - CONTATOS*/
+
+
+
+
+#corpo4 {
+    background-image: url('photos/céu.avif');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    animation: movimento 30s linear infinite;
+
+
+}
+
+#titulo4 {
+    font-size: 70px;
+    padding: 40px 4%;
+    margin: 60px 4%;
+    color: white;
+    text-align: center;
+
+}
+
+#contatosection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    flex-direction: column;
+}
+.redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inst {
+    height: 60px;
+    width: 60px;
+}
+
+#face {
+    height: 100px;
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#mail {
+    height: 110px;
+    width: 110px;
+    margin: 0;
+    padding: 0;
+}
+
+figcaption {
+    margin: 0px;
+    padding: 0px;
+}

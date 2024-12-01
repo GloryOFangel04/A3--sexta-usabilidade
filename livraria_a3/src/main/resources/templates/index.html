@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    
+    
+    
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--GOOGLE FONTS-->
+
+
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+<body>
+    <header> <!--Cabeçalho da página-->
+        <div class="interface">
+            
+            <div id="foto">
+                <a href="index.html">
+                    <img src="/photos/gatinho.png" alt="foto de gatinho">
+                </a>
+                
+            </div>
+
+            <nav class="menu"> <!--Navegação da página-->
+                 <ul id="listaMenu"> <!--lista não ordenada-->
+                    <li><a href="http://localhost:8080/portifolio/gabriel/quem">QUEM SOU?</a></li>
+                    <li><a href="http://localhost:8080/portifolio/gabriel/formacoes">MINHAS FORMAÇÕES</a></li>
+                    <li><a href="http://localhost:8080/portifolio/gabriel/contatos">CONTATOS</a></li>
+                </ul>
+            </nav> 
+
+      <!--TESTE. APAGAR DEPOIS-->
+      <script>
+        function getGreeting() {
+          const now = new Date(); 
+          const hours = now.getHours(); 
+          let greeting;
+      
+          if (hours >= 5 && hours < 12) {
+            greeting = "Bom dia! Bem vindo(a) ao meu Portfólio";
+          } else if (hours >= 12 && hours < 18) {
+            greeting = "Boa tarde! Bem vindo(a) ao meu Portfólio ";
+          } else {
+            greeting = "Boa noite! Bem vindo(a) ao meu portfólio";
+          }
+      
+          // Exibe a saudação em um alerta
+          alert(greeting);
+        }
+      
+        // Chama a função quando a página é carregada
+        window.onload = getGreeting;
+      </script>
+      
+            
+    
+        </div> <!--fechando interface-->
+        
+       
+
+    </header>
+
+    <p id="parag">Gabriel, um jovem de 21 anos de São Paulo, combina sua paixão pela tecnologia e dedicação ao Crossfit. Movido por curiosidade, ele mergulhou no mundo da programação, enfrentando desafios e aprendendo tanto no front-end quanto no back-end. 
+    </p>
+    <h3 id="frase1">HOJE IMPOSSÍVEL, AMANHÃ TECNOLOGIA.</h3>
+</body>
+</html>

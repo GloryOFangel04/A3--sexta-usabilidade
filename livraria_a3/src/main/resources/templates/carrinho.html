@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho</title>
+    <link rel="stylesheet" href="/carrinho.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Seção principal com título -->
+        <div class="section-header">
+            <h1>Meu Carrinho</h1>
+        </div>
+
+        <!-- Itens do carrinho -->
+        <div class="cart-item">
+            <img src="image/book13.jpg" alt="Uma família feliz">
+            <div class="cart-item-details">
+                <h3>Uma família feliz</h3>
+                <p class="author">Raphael Montes</p>
+                <div class="quantity">
+                    <label for="quantity-1">Quantidade:</label>
+                    <input type="number" id="quantity-1" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+            <div class="price" id="price-1" data-original-price="55.00">R$00,00</div>
+        </div>
+        
+        <div class="cart-item">
+            <img src="image/book7.jpg" alt="Harry Potter e a Pedra Filosofal">
+            <div class="cart-item-details">
+                <h3>Harry Potter e a Pedra Filosofal</h3>
+                <p class="author">J.K. Rowling</p>
+                <div class="quantity">
+                    <label for="quantity-2">Quantidade:</label>
+                    <input type="number" id="quantity-6" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+            <div class="price" id="price-6" data-original-price="55.00">R$00,00</div>
+        </div>
+        
+        <div class="cart-item">
+            <img src="image/book8.jpg" alt="Suicidas">
+            <div class="cart-item-details">
+                <h3>Suicidas</h3>
+                <p class="author">Raphael Montes</p>
+                <div class="quantity">
+                    <label for="quantity-3">Quantidade:</label>
+                    <input type="number" id="quantity-5" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+            <div class="price" id="price-5" data-original-price="47.00">R$00,00</div>
+        </div>
+        
+        <div class="cart-item">
+            <img src="image/book9.jpg" alt="Dom Casmurro">
+            <div class="cart-item-details">
+                <h3>Dom Casmurro</h3>
+                <p class="author">Machado de Assis</p>
+                <div class="quantity">
+                    <label for="quantity-4">Quantidade:</label>
+                    <input type="number" id="quantity-7" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+            <div class="price" id="price-7" data-original-price="37.00">R$00,00</div>
+        </div>
+        
+        <div class="cart-item">
+            <img src="image/book10.jpg" alt="Silvio Santos - A biografia definitiva">
+            <div class="cart-item-details">
+                <h3>Silvio Santos - A biografia definitiva</h3>
+                <p class="author">Anna Medeiros</p>
+                <div class="quantity">
+                    <label for="quantity-5">Quantidade:</label>
+                    <input type="number" id="quantity-8" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+            <div class="price" id="price-8" data-original-price="55.00">R$00,00</div>
+        </div>
+        
+        <div class="cart-item">
+            <img src="image/book11.jpg" alt="Mindset - A nova psicologia do sucesso">
+            <div class="cart-item-details">
+                <h3>Mindset - A nova psicologia do sucesso</h3>
+                <p class="author">Carol S. Dweck</p>
+                <div class="quantity">
+                    <label for="quantity-6">Quantidade:</label>
+                    <input type="number" id="quantity-9" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+            <div class="price" id="price-9" data-original-price="35.00">R$00,00</div>
+        </div>
+        
+        <div class="cart-item">
+            <img src="image/book12.jpg" alt="Alguém que você conhece">
+            <div class="cart-item-details">
+                <h3>Alguém que você conhece</h3>
+                <p class="author">Shari Lapena</p>
+                <div class="quantity">
+                    <label for="quantity-7">Quantidade:</label>
+                    <input type="number" id="quantity-4" class="quantity-input" value="0" min="0">
+                </div>
+            </div>
+            <div class="price" id="price-4" data-original-price="45.00">R$00,00</div>
+        </div>
+
+        <!-- Resumo do carrinho com o total e botão de pagamento -->
+        <div class="cart-summary">
+            <h3>Total: <span id="total-price">R$00,00</span></h3>
+            <button class="btn-pagamento" onclick="goToPayment()">Ir para pagamento</button>
+        </div>
+
+    </div>
+
+    <script src="/carrinho.js"></script>
+</body>
+</html>

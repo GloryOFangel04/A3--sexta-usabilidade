@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--links-->
+    <link rel="stylesheet" href="/estilo_pg_principal.css">
+
+    <!--bibliotecas-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
+        integrity="sha512-B46MVOJpI6RBsdcU307elYeStF2JKT87SsHZfRSkjVi4/iZ3912zXi45X5/CBr/GbCyLx6M1GQtTKYRd52Jxgw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--links fim-->
+
+    <title>Pata na Pagina </title>
+
+</head>
+
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="header1">
+            <a href="#" class="logo"><i class="fas fa-book"> Pata na pagina</i></a>
+            <!--forms-->
+            <form id="form-pesquisa" class="forms-pesquisa">
+                <input 
+                    type="search" 
+                    name="pesquisa" 
+                    placeholder="Pesquise aqui..." 
+                    id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+            <!--forms-->
+            <div class="icones">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="http://localhost:8080/carrinho" id="cart-icon" class="fas fa-shopping-cart"></a>
+                <span id="cart-count">0</span> <!-- Contador do carrinho -->
+                <a href="#" class="fas fa-heart"></a>
+                
+                <a href="http://localhost:8080/usuario" class="fas fa-user"></a>
+                <!--<div id="search-btn" class="fas fa-user"></div>-->
+                <a class="fa-solid fa-arrow-right-from-bracket" id="logoutButton"></a>
+
+            </div>
+        </div>
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="#home">Início</a>
+                <a href="#featured">Destaques</a>
+                <a href="#arrivals">Novidades</a>
+                <a href="#reviews">Avaliações</a>
+                <a href="#contacts">Contatos</a>
+
+            </nav>
+        </div>
+    </div>
+    <!--heder fim-->
+
+    <!--navbar botão-->
+    <nav class="bottom-navbar">
+        <a href="#home" class="fas fa-home"></a>
+        <a href="#featured" class="fas fa-list"></a>
+        <a href="#arrivals" class="fas fa-tags"></a>
+        <a href="#reviews" class="fas fa-comments"></a>
+        <a href="#contacts" class="fas fa-blogs"></a>
+
+    </nav>
+    <!--navbar botão fim-->
+    <!--sessão home-->
+
+    <section class="home" id="home">
+        <div class="row">
+
+            <div class="content">
+                <h3>Até 75% de desconto</h3>
+                <p>Aproveite ofertas imperdíveis em uma variedade de livros. Desde bestsellers até títulos exclusivos,
+                    com descontos especiais para você renovar sua coleção ou encontrar a leitura perfeita. Não perca a
+                    chance de
+                    economizar enquanto descobre novas histórias e conhecimentos. Compre agora e mergulhe em novas
+                    aventuras literárias!</p>
+                <a href="#" class="btn">compre agora</a>
+
+            </div>
+
+            <!--book slider-->
+            <div class="swiper book-slider">
+                <div class="swiper-wrapper"> <!-- Corrigido de wraper para wrapper -->
+                    <a href="#" class="swiper-slide"><img src="image/book2.jpg" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="image/book3.jpg" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="image/book7.jpg" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="image/book6.jpg" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="image/book5.jpg" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="image/book4.jpg" alt=""></a>
+                </div>
+            </div>
+
+            <!--book slider fim-->
+        </div>
+
+    </section>
+    <!--sessão home fim-->
+    <!--sessão icones-->
+    <section class="icons-container">
+
+        <div class="icons">
+            <i class="fa-solid fa-paper-plane"></i>
+            <div class="content">
+                <h3>Frete grátis </h3>
+                <p>Pedidos apartr de R$100,00</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-lock"></i>
+            <div class="content">
+                <h3>Pagamento seguro </h3>
+                <p>Dados criptografados</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-redo-alt"></i>
+            <div class="content">
+                <h3>Devolução fácil </h3>
+                <p>em até 7 dias uteis</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-headset"></i>
+            <div class="content">
+                <h3>suporte 24hrs </h3>
+                <p>fale conosco a qualquer momento</p>
+            </div>
+        </div>
+
+    </section>
+    <!--sessão icones fim-->
+
+    <!--Destaque seção-->
+    <section class="featured" id="featured">
+
+        <h1 class="heading"><span>Livros em destaques</span></h1>
+
+        <div class="swipwer featured-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+
+                    
+
+                    <div class="imagem">
+                        <img src="image/book13.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Uma família feliz<br><br></h3>
+                        <div class="price">R$55,00<span> R$66,00</span></div>
+                        <a href="#" class="btn" data-id="1" onclick="addToCart(event)">Adicionar ao carrinho</a>
+
+                        
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+
+                    
+
+                    <div class="imagem">
+                        <img src="image/book7.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Harry potter e a pedra filosofal</h3>
+                        <div class="price"> R$55,00<span> R$66,00</span></div>
+                        <a href="#" class="btn" data-id="6" onclick="addToCart(event)">Adicionar ao carrinho</a>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+
+                    <div class="imagem">
+                        <img src="image/book8.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Suicidas<br><br></h3>
+                        <div class="price"> R$47,00<span> R$51,00</span></div>
+                        <a href="#" class="btn"  data-id="5" onclick="addToCart(event)">Adicionar ao carrinho</a>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+
+
+                    <div class="imagem">
+                        <img src="image/book9.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Dom casmurro<br><br></h3>
+                        <div class="price"> R$ 37,00 <span> R$48,00</span></div>
+                        <a href="#" class="btn"  data-id="7" onclick="addToCart(event)">Adicionar ao carrinho</a>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+
+                    <div class="imagem">
+                        <img src="image/book10.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Silvio Santos - A biografia definitiva</h3>
+                        <div class="price"> R$55,00 <span> R$59,00</span></div>
+                        <a href="#" class="btn"  data-id="8"onclick="addToCart(event)">Adicionar ao carrinho</a>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+
+                    
+
+                    <div class="imagem">
+                        <img src="image/book11.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Mindset - A psicologia do sucesso</h3>
+                        <div class="price"> R$ 35,00<span> R$44,00</span></div>
+                        <a href="#" class="btn"  data-id="9"onclick="addToCart(event)">Adicionar ao carrinho</a>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+
+                    
+
+                    <div class="imagem">
+                        <img src="image/book12.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Alguem que você conhece<br><br></h3>
+                        <div class="price"> R$45,00<span> R$60,00</span></div>
+                        <a href="#" class="btn"  data-id="4" onclick="addToCart(event)">Adicionar ao carrinho</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+    </section>
+    <!--Destaque seção fim-->
+
+<!--     newseller inicio -->
+     <section class="newseletter">
+        <form action="">
+            <h3>Se inscreva para ver as ultimas atualizações</h3>
+            <input type="email" name="" placeholder="Entre com o seu email"class="boxing">
+            <input type="submit" value="subscribe" class="btn">
+
+        </form>
+     </section>
+<!--     newseller fim -->
+
+<!-- arrivals -->
+ <section class="arrivals" id="arrivals">
+    <h1 class="heading-h1"><span>Novas chegadas</span></h1>
+
+    <div class="swiper arrivals-slider">
+        <div class="swiper-wrapper">
+            <a href="#" class="swiper-slide box">
+                <div class="fotos_livros">
+                    <img src="image/book6.jpg">
+                </div>
+                <div class="content2">
+                    <h3>Percy Jackson - o ladrão de raios</h3>
+                    <div class="price">R$35,00 <span>R$47,40</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="fotos_livros">
+                    <img src="image/book5.jpg">
+                </div>
+                <div class="content2">
+                    <h3>É assim que acaba</h3>
+                    <div class="price">R$35,00 <span>R$47,40</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="fotos_livros">
+                    <img src="image/book4.jpg">
+                </div>
+                <div class="content2">
+                    <h3>A pacienete silenciosa </h3>
+                    <div class="price">R$35,00 <span>R$42,00</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="fotos_livros">
+                    <img src="image/book3.jpg">
+                </div>
+                <div class="content2">
+                    <h3>Saboroso cadáver</h3>
+                    <div class="price">R$37,00 <span>R$55,90</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="fotos_livros">
+                    <img src="image/book2.jpg">
+                </div>
+                <div class="content2">
+                    <h3>Melhor que nos filmes</h3>
+                    <div class="price">R$35,00 <span>R$39,40</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="fotos_livros">
+                    <img src="image/book1.jpg">
+                </div>
+                <div class="content2">
+                    <h3>Dracula</h3>
+                    <div class="price">R$52,00 <span>R$67,40</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+    
+    <!--linha 2-->
+
+    <div class="swiper arrivals-slider">
+        <div class="swiper-wrapper">
+            <a href="#" class="swiper-slide box">
+                <div class="fotos_livros">
+                    <img src="image/book20.jpg">
+                </div>
+                <div class="content2">
+                    <h3>Pavores de fezbear</h3>
+                    <div class="price">R$35,00 <span>R$47,40</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="fotos_livros">
+                    <img src="image/book19.jpg">
+                </div>
+                <div class="content2">
+                    <h3>Verity</h3>
+                    <div class="price">R$49,00 <span>R$59,90</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="fotos_livros">
+                    <img src="image/book18.jpg">
+                </div>
+                <div class="content2">
+                    <h3>Teoricamente amor</h3>
+                    <div class="price">R$48,00 <span>R$52,00</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="fotos_livros">
+                    <img src="image/book16.jpg">
+                </div>
+                <div class="content2">
+                    <h3>Morando com um vampiro</h3>
+                    <div class="price">R$29,00 <span>R$47,40</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="fotos_livros">
+                    <img src="image/book14.jpg">
+                </div>
+                <div class="content2">
+                    <h3>assistente do vilão</h3>
+                    <div class="price">R$35,00 <span>R$47,40</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="fotos_livros">
+                    <img src="image/book13.jpg">
+                </div>
+                <div class="content2">
+                    <h3>Familia feliz</h3>
+                    <div class="price">R$55,00 <span>R$66,00</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+            
+           
+            
+        </div>
+    </div>
+ </section>
+<!-- arrivals fim -->
+
+<!-- Avaliações  -->
+
+<section class="reviews" id="reviews">
+<h1 class="heading"> reviews dos clientes</h1>
+
+    <div class="swiper reviews-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="image/client2.jpg" alt="">
+                    <h3>Jackson Mayer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/client1.jpg" alt="">
+                    <h3>Patricia Soares</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/client4.jpg" alt="">
+                    <h3>Bruna Santos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/client3.jpg" alt="">
+                    <h3>emanuel Santos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</section>
+
+<!-- Avaliações fim -->
+
+<!--blog/contatos-->
+<section class="blog" id="contacts">
+    <h1 class="heading"><span>Nossos portifolios</span></h1>
+    <br>
+    <br>
+    <p> Muito obrigado por nos acompanhar até aqui! Agora, convidamos você a explorar nossos portfólios pessoais e descobrir mais sobre quem somos e o que fazemos. Esperamos que goste do que vai encontrar e se sinta inspirado pela nossa trajetória.</p>
+    <br>
+    <br>
+    <div class="photo-container">
+        <div class="box">
+            <img src="image/dev2.png" alt="">
+            <h3>Gabriel Welzel</h3>
+            <a href="http://localhost:8080/portifolio/gabriel" class="btn-navegacao">Saiba mais</a>
+        </div>
+        <div class="box">
+            <img src="image/dev1.jpeg" alt="">
+            <h3>Gloria Andrade</h3>
+            <a href="http://localhost:8080/portifolio/gloria" class="btn-navegacao">Saiba mais</a>
+
+        </div>
+    </div>
+    
+</section>
+<!--blog/contatos fim-->
+
+<!-- rodapé -->
+<footer>
+    <div class="footer-content">
+        
+        <p>© 2024 Glória S. B. Andrade. Todos os direitos reservados.</p>
+        <p>Todo o conteúdo deste site, incluindo textos e imagens, é protegido por direitos autorais. A reprodução ou distribuição sem permissão é proibida.</p>
+    </div>
+</footer>
+<!-- rodapé fim -->
+
+    <!--scripts-->
+    <script src="/javaScript_pg_principal.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!--scripts fim-->
+</body>
+
+</html>

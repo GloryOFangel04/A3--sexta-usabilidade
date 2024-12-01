@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="/pagamento.css">
+</head>
+<body>
+    <div class="container">
+        <form id="payment-form" action="/pagar" method="post">
+            <input type="hidden" id="usuarioID" name="usuarioID"  >
+            <input type="hidden" id="qtd" name="quantidade"  >
+
+            <div class="row">
+                <!-- Endereço de cobrança -->
+                <div class="column">
+                    <h3 class="titulo">Endereço de cobrança</h3>
+
+                    <div class="input-box">
+                        <span>Nome completo</span>
+                        <input type="text" id="nome" placeholder="Seu nome" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span>Email</span>
+                        <input type="email" id="email" placeholder="Exemplo@email.com" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span>Endereço</span>
+                        <input type="text" id="endereco" placeholder="Seu endereço" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span>Cidade</span>
+                        <input type="text" id="cidade" placeholder="Sua cidade" required>
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Estado</span>
+                            <select id="estado" required>
+                                <option value="" disabled selected>Selecione seu estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informações de pagamento -->
+                <div class="column">
+                    <h3 class="titulo">Informações de pagamento</h3>
+
+                    <div class="input-box">
+                        <span>Número do cartão</span>
+                        <input type="text" id="cartao" placeholder="0000 0000 0000 0000" maxlength="16" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span>Validade</span>
+                        <input type="text" id="validade" placeholder="MM/AA" maxlength="5" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span>Código de segurança</span>
+                        <input type="text" id="cvv" placeholder="CVV" maxlength="3" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span>Parcelamento</span>
+                        <select id="parcelamento" required>
+                            <option value="1">1x sem juros</option>
+                            <option value="2">2x sem juros</option>
+                            <option value="3">3x sem juros</option>
+                            <option value="4">4x sem juros</option>
+                            <option value="5">5x sem juros</option>
+                            <option value="6">6x sem juros</option>
+                            <option value="7">7x</option>
+                            <option value="8">8x</option>
+                            <option value="9">9x</option>
+                            <option value="10">10x</option>
+                           
+                        </select>
+                    </div>
+
+                    <div class="payment-summary">
+                        <h3>Total a pagar: <span id="payment-total">R$00,00</span></h3>
+                    </div>
+
+                    <button type="submit" id="submit-payment">Finalizar Pagamento</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="/pagamento.js"></script>
+</body>
+</html>

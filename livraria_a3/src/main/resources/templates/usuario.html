@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página do Usuário</title>
+  <link rel="stylesheet" href="/Usuariostyles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="logo">📚 Pata na Pagina</h1>
+  </header>
+
+  <div class="container">
+    <!-- Lado Esquerdo: Informações do Usuário -->
+    <aside class="sidebar">
+      <h3>⚙️ Configurações da Conta</h3>
+      <ul class="settings-menu">
+        <li><button class="menu-item" id="btn-edit-profile">Editar Perfil</button></li>
+        <li><button class="menu-item" id="btn-delete-address">Gerenciar Endereços</button></li>
+        <li><button class="menu-item" id="btn-payment-methods">Métodos de Pagamento</button></li>
+        <li><button class="menu-item" id="btn-delete-account">Excluir Conta</button></li>
+      </ul>
+    </aside>
+
+    <!-- Lado Direito: Resultados/Conteúdo -->
+    <main class="main-content">
+      <h2>Bem-vindo, <span id="user-name">Usuário</span></h2>
+      <p class="subtitle">Gerencie suas informações abaixo:</p>
+      <div class="last-order">
+        <h3>Último Pedido</h3>
+        <p id="last-order-details">Nenhum pedido encontrado.</p>
+      </div>
+
+      <!-- Outros conteúdos podem ir aqui -->
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2024 Loja de Livros. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="/Usuarioscripts.js"></script>
+</body>
+</html>

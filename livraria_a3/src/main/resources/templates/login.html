@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="/loginStyle.css">
+    <title>Login</title>
+</head>
+<body>
+    <main class="container">
+        <!-- Formulário de login -->
+        <form action="/logar" method="post">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input placeholder="Email" type="email" name="email" id="email">
+                <i class="bx bxs-user"></i>
+            </div>
+
+            <div class="input-box">
+                <input placeholder="Senha" type="password" name="senha" id="senha" maxlength="8">
+                <i class="bx bxs-lock-alt" id="toggleSenha"></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox" name="lembrar" id="lembrar"> Lembrar senha</label>
+                <a href="#">Esqueci a senha</a>
+            </div>
+
+             <!-- Mensagem de erro caso não tenha cadastro -->
+            <div id="error-message" style="color: red;">
+                <p th:text="${erro}"></p>
+            </div>
+            <button type="submit" class="Login" id="loginButton">Login</button>
+
+           
+           
+
+            <div class="register-link">
+                <p>Não tem uma conta? <a href="http://localhost:8080/cadastro">Cadastre-se</a></p>
+            </div>
+        </form>
+    </main>
+
+    <script src="/login.js"></script>
+</body>
+</html>

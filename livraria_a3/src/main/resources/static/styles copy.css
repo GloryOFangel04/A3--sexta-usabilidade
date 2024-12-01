@@ -1,0 +1,342 @@
+/* Fontes */
+@font-face {
+    font-family: 'Wakile';
+    src: url('/fonts/wakile/wakile.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'magical_4';
+    src: url('/fonts/magical_4/Magical\ Star\ Demo.otf') format('opentype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shrikhand&display=swap');
+
+
+/* rodapé */
+:root {
+    --cor-principal: #e2d6f3;
+    --cor-texto: #4c3a57;
+    --cor-hover: #f4e3b2;
+    --fundo-contatos: #816de2;
+    --bordas-contato: orange;
+    --fundo-git: #8d5ba5;
+    --sombra-padrao: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Seção Home */
+.Home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cor-principal);
+    overflow: hidden;
+}
+
+.vidro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(50px);
+    pointer-events: none;
+    z-index: 20;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.titulo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    font-family: 'Wakile', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    z-index: 100;
+    color: transparent;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 8px 8px 35px rgba(0, 0, 0, 0.8);
+    opacity: 0.4;
+}
+
+/* Página Sobre Mim */
+.pagina2 {
+    height: 100vh;
+    background-image: url('imagens/fundo_luareserva.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    gap: 25px;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 750px) {
+    .pagina2 {
+        flex-direction: column;
+        justify-content: end;
+    }
+}
+
+/* Contêiner direito */
+.Container_direito {
+    width: 40%;
+    height: 60%;
+    background: radial-gradient(circle, #b58ffd 20%, #bfa0fa 40%, #c7aff7 60%, #d3c2f5 80%, #ddd2f1 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: end;
+}
+
+.Container_direito p {
+    color: white;
+    line-height: 25px;
+    font-size: 20px;
+    padding: 20px;
+    font-family: 'Poppins';
+}
+
+@media (max-width: 750px) {
+    .Container_direito {
+        width: 100%;
+        padding: 10px;
+    }
+    .Container_direito p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+
+/* Imagem e FotoSobre */
+.imagem {
+    width: 50%;
+}
+
+.FotoSobre {
+    width: 300px;
+    height: 300px;
+    border-radius: 180px;
+    object-fit: cover;
+    box-shadow: 0 4px 20px var(--sombra-padrao);
+}
+
+.imagem p{
+    font-family: "Shrikhand", serif;
+    color: #764d85;
+    font-size: 25px;
+
+    
+}
+
+/* Menu */
+nav {
+    position: fixed;
+    width: 98.73%;
+    top: 0;
+    background: #e3d8f465;
+    backdrop-filter: blur(50px);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-family: 'magical_4';
+    font-size: 50px;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--cor-hover);
+}
+
+/* Seção Habilidades */
+.Habilidades {
+    height: 100vh;
+    background-image: url('imagens/fundo_nuvem.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px;
+    gap: 20px;
+}
+
+.Superior {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Inferior {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blender, .git {
+    border: 5px solid var(--fundo-git);
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--sombra-padrao);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Inferior div:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Habilidades div img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-family: "Poppins", serif;
+    color: #ffffff; /* Altera a cor do texto para branco */
+    font-size: 20px;
+}
+
+.intro-text h2{
+    font-family: "Shrikhand", serif;
+    color: #fff;
+}
+
+/*Contatos*/
+
+.Contatos {
+    height: 100vh;
+    background-color: #a898f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.Contatos p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+/* Estilo dos ícones de contato */
+.Contatos .contato-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.Contatos .icone {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.Contatos a {
+    text-decoration: none;
+}
+
+.Contatos .icone:hover {
+    transform: scale(1.1);
+}
+
+.Contatos .nome-usuario {
+    font-size: 1.1rem;
+    color: #f4e3b2;
+}
+
+
+/* Estilo do rodapé */
+footer {
+    width: 100%;
+    background-color: #a898f7;
+    color: #ffffff;
+    padding: 15px 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer .footer-content p {
+    margin: 5px 0;
+    font-size: 0.85rem;
+}
+
+
+/*.canvas2{
+
+}
+
+.glassy-overlay{
+position: fixed;
+top:0 ;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(128, 109, 226, 0.5);
+backdrop-filter: blur(50px);
+pointer-events: none;
+
+
+}/*
