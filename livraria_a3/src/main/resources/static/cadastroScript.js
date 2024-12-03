@@ -1,3 +1,17 @@
+function limparCampos() {
+    document.getElementById("firstname").value = "";
+    document.getElementById("lastname").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("number").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("confirmPassword").value = "";
+    // Limpar o campo de gênero, se necessário
+    const generoInputs = document.querySelectorAll('input[name="gender"]');
+    generoInputs.forEach(input => input.checked = false);
+    // Limpar o campo CPF
+    document.getElementById("cpf").value = "";
+}
+
 // Função para formatar CPF
 function formatCPF(event) {
     let input = event.target;
@@ -16,26 +30,46 @@ function formatCPF(event) {
     input.value = value;
 }
 
-// Função para validar CPF
+// Função para validar as senhas
+function validarSenhas() {
+    const senha = document.getElementById("password").value;
+    const senhaConfirmada = document.getElementById("confirmPassword").value;
+    
+    if (senha !== senhaConfirmada) {
+        alert("As senhas não são iguais!");
+        return false;
+    }
+    return true;
+}
+
+// Função para validar o CPF
 function validarCPF() {
     let cpf = document.getElementById('cpf').value.replace(/\D/g, ''); // Remove os caracteres não numéricos
-    let soma = 0;
 
     if (cpf.length !== 11) {
         alert("CPF inválido! Certifique-se de que está digitando 11 dígitos.");
         return false;
     }
 
-    for (let i = 0; i < cpf.length; i++) {
-        soma += parseInt(cpf.charAt(i), 10);
-    }
-
-    if ([33, 44, 55, 66].includes(soma)) {
-        return true;
-    } else {
-        alert("CPF inválido! A soma dos dígitos não é 33, 44, 55 ou 66.");
+    // Verifica se o CPF não é uma sequência de números repetidos (ex: 111.111.111-11)
+    if (/^(\d)\1{10}$/.test(cpf)) {
+        alert("CPF inválido! Não pode ser uma sequência de números repetidos.");
         return false;
     }
+
+    // Verificar a soma dos números do CPF
+    let soma = 0;
+    for (let i = 0; i < 11; i++) {
+        soma += parseInt(cpf.charAt(i));
+    }
+
+    // Verificar se a soma é 33, 44, 55 ou 66
+    if (![33, 44, 55, 66].includes(soma)) {
+        alert("CPF inválido! A soma dos números do CPF deve ser 33, 44, 55 ou 66.");
+        return false;
+    }
+
+    return true;
 }
 
 // Função para alternar visibilidade da senha
@@ -76,15 +110,25 @@ document.getElementById("number").addEventListener("input", formatPhoneNumber);
 document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault(); // Impede envio padrão
 
+    // Validação de Senha
+    if (!validarSenhas()) {
+        return; // Interrompe o envio se as senhas não forem iguais
+    }
+
+    // Validação de CPF
+    if (!validarCPF()) {
+        return; // Interrompe o envio se o CPF for inválido
+    }
+
     const nome = document.getElementById("firstname").value;
     const sobrenome = document.getElementById("lastname").value;
     const email = document.getElementById("email").value;
     const celular = document.getElementById("number").value;
     const senha = document.getElementById("password").value;
-    const genero = document.querySelector('input[name="gender"]:checked')?.value;
+    
 
     // Objeto do usuário
-    const usuario = { nome, sobrenome, email, celular, senha, genero };
+    const usuario = { nome, sobrenome, email, celular, senha };
 
     // Envio para API
     fetch("http://localhost:8080/usuarios", {
@@ -95,6 +139,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
         .then(response => {
             if (response.status === 200) {
                 alert("Usuário cadastrado com sucesso!");
+                limparCampos();
             } else {
                 alert("Erro ao cadastrar o usuário.");
             }
